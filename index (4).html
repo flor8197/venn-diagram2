@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venn Diagram: Animal vs. Plant Cells</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h2 { color: #2a7a7b; text-align: center; }
+        .cell-parts { text-align: center; margin-bottom: 20px; }
+        .cell-parts span { margin: 0 10px; font-weight: bold; }
+        .venn-container { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; position: relative; }
+        .circle {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #4CAF50;
+            border-radius: 50%;
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .circle.animal { background-color: rgba(255, 200, 200, 0.5); }
+        .circle.plant { background-color: rgba(200, 255, 200, 0.5); }
+        .circle.common {
+            background-color: rgba(200, 200, 255, 0.5);
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+        textarea { width: 90%; height: 80px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Venn Diagram: Animal vs. Plant Cells</h2>
+
+    <div class="cell-parts">
+        <p><strong>Animal Cell Parts:</strong> Cell Membrane, Nucleus, Cytoplasm, Lysosome, Centrioles</p>
+        <p><strong>Plant Cell Parts:</strong> Cell Wall, Chloroplast, Vacuole, Nucleus, Cytoplasm</p>
+        <p><strong>Common Parts:</strong> Cell Membrane, Nucleus, Cytoplasm, Mitochondria, Ribosome</p>
+    </div>
+
+    <div class="venn-container">
+        <div class="circle animal">
+            <h4>Animal Cell</h4>
+            <textarea placeholder="Write animal cell exclusive parts here..."></textarea>
+        </div>
+        <div class="circle common">
+            <h4>Common Parts</h4>
+            <textarea placeholder="Write common parts here..."></textarea>
+        </div>
+        <div class="circle plant">
+            <h4>Plant Cell</h4>
+            <textarea placeholder="Write plant cell exclusive parts here..."></textarea>
+        </div>
+    </div>
+
+    <button onclick="window.print()">Print Venn Diagram</button>
+
+</body>
+</html>
